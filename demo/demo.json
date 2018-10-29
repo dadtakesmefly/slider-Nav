@@ -1,0 +1,7 @@
+{
+  "enablePullDownRefresh": false,
+  "disableScroll":true,
+  "usingComponents": {
+    "top-navigation": "/coms/top-navigation/index"
+  }
+}

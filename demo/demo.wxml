@@ -1,0 +1,17 @@
+<!--pages/demo/demo.wxml-->
+<view class='container'>
+  <top-navigation title="越野技巧" theme="black"></top-navigation>
+  <view class="top-navigation-take{{isIpx? ' model-x' : ''}}"></view>
+
+  <view class='left-slider'>
+      <view wx:for="{{cateItems}}" wx:key="id">
+          <view catchtap='selectNav' data-id="{{item.cate_id}}" data-index='{{index}}' class='{{curNav == item.cate_id ?"active":""}}' >{{item.cate_name}}</view>
+      </view>
+  </view>  
+  <scroll-view class='right-content'  scroll-y   bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="show1" class='right-items'>111</view>
+    <view id="show2" class='right-items'>222</view>
+    <view id="show3" class='right-items'>333</view>
+    <view id="show4" class='right-items'>444</view>
+  </scroll-view>
+</view>
