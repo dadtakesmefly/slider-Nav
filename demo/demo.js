@@ -122,7 +122,8 @@ Page({
       }
     ],
     curNav: 1,
-    curIndex: 0
+    curIndex: 0，
+    arr:[],
   },
 
   /**
