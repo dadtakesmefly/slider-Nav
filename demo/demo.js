@@ -212,5 +212,22 @@ Page({
     })
     
   } ,
+   scroll:function(e){
+    var that = this 
+    console.log(e.detail.scrollTop)
+    let scrollTop = e.detail.scrollTop,
+    domHeight = that.data.arr,
+    index = [];
+    for (let i = 0; i < domHeight.length;i++){
+      if (scrollTop < domHeight[i] * (i+1) - 300){
+          console.log(i)
+          index.push(i)
+          that.setData({
+            curNav: index[0]+1,
+          })
+      }
+    }
+    console.log(index)
+  }
   
 })
